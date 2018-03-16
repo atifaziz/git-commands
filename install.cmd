@@ -33,7 +33,7 @@ popd
 goto :EOF
 
 :main
-for %%c in (git-*.cmd) do (
+for %%c in (git-*) do (
     if not exist "%~1\%%c" (
         mklink "%~1\%%c" "%%~fc" || exit /b 1
         echo %%c was installed.
